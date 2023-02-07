@@ -1,0 +1,34 @@
+@each $id, $color in $background {
+  .g--bg-#{"" + $color} {
+    background-color: $color;
+  }
+}
+
+@each $id, $bk in $breackpoint {
+  @each $id, $color in $background {
+    @media (min-width: $bk) {
+      .g--bg-#{"" + $color}\@#{$id} {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+// @each $key in getBgColorKeys() {
+//   $value: getBgColor($key);
+//   .g--bg-#{"" + $value} {
+//     background-color: $value;
+//   }
+// }
+
+// @each $clave in getBreakpointKeys() {
+//   $value: getBreakpoint($clave);
+//   @each $key in getBgColorKeys() {
+//     $color: getBgColor($key);
+//     @media (min-width: $value) {
+//       .g--bg-#{$key}\@#{$clave} {
+//         background-color: $color;
+//       }
+//     }
+//   }
+// }

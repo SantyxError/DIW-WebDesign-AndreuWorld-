@@ -1,0 +1,23 @@
+.c-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: getBackground("blue_light");
+  padding: getPadding(16) getPadding(8);
+  gap: getGap(7);
+
+  &__title {
+    color: getColor("negro", 0);
+    font-size: getFontSize("6xl");
+    font-family: getFontFamily("fuente1");
+    font-weight: getFontWeight(8);
+  }
+
+  &__buscador {
+    padding: getPadding(6) getPadding(8);
+    font-size: getFontSize("2xl");
+    width: 800px;
+    box-shadow: getShadow(2);
+  }
+}

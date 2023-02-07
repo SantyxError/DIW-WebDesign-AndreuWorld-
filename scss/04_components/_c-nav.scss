@@ -1,0 +1,52 @@
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: getBackground("white");
+  padding: getPadding(11) getPadding(8);
+  color: getColor("negro", 0);
+  font-family: getFontFamily("fuente4");
+
+  &__logo {
+    font-size: getFontSize("3xl");
+    font-weight: getFontWeight(10);
+    margin-top: getMargin(11);
+    padding-left: getPadding(15);
+  }
+
+  &__menu-container {
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    justify-items: start;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: getGap(11) getGap(5);
+  }
+
+  &__idioma {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: getGap(1);
+    width: 80px;
+    padding-left: getPadding(8);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: getColor("negro", 0);
+    font-size: getFontSize("s");
+    width: 100px;
+    // padding-bottom: getPadding(7);
+
+    &--big {
+      font-size: getFontSize("m");
+    }
+  }
+
+  &__buscador {
+    width: 120px;
+    height: 20px;
+  }
+}

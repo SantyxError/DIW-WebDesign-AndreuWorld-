@@ -1,0 +1,28 @@
+.c-button {
+  color: getColor("blanco", 0);
+  padding: getPadding(6) getPadding(9);
+  border-radius: getBorderRadius(3);
+  font-family: getFontFamily("fuente1");
+  font-size: getFontSize("2xl");
+  text-decoration: none;
+
+  // @include box-shadow(1);
+
+  &--black {
+    background-color: getColor("negro", 0);
+    color: getColor("blanco", 0);
+    border: 1px solid white;
+  }
+
+  &--big {
+    background-color: getColor("azul", 0);
+    font-size: getFontSize("l");
+    padding: getPadding(4) getPadding(5);
+  }
+
+  &--transparent {
+    border-radius: getBorderRadius(8);
+    border: 1px solid white;
+    font-size: getFontSize("m");
+  }
+}

@@ -1,0 +1,84 @@
+.c-footer {
+  background-color: getBackground("grey");
+  font-family: getFontFamily("fuente1");
+  color: getColor("blanco", 0);
+  padding: getPadding(10) getPadding(7);
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: getGap(10);
+  }
+
+  &__logo {
+    font-size: getFontSize("3xl");
+    font-weight: getFontWeight(10);
+    margin-top: getMargin(7);
+    padding-left: getPadding(6);
+    width: 22%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: getGap(12);
+    // width: 100%;
+  }
+
+  &__container-buscador {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: getGap(7);
+    margin-right: 50px;
+  }
+
+  &__idioma {
+    display: flex;
+    justify-content: flex-end;
+    gap: getGap(4);
+  }
+
+  &__buscador {
+    width: 130px;
+    opacity: 0.3;
+    border-style: 1px solid white;
+    outline: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: getColor("blanco", 0);
+    font-size: getFontSize("xs");
+
+    &--title {
+      font-size: getFontSize("s");
+      font-weight: getFontWeight(8);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: getGap(7);
+  }
+
+  &__bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 100px;
+    gap: getGap(6);
+  }
+
+  &__politicas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: getGap(12);
+  }
+}

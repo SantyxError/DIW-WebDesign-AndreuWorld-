@@ -1,0 +1,37 @@
+.c-hero {
+  background-image: url("../assets/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: getFontFamily("fuente1");
+  padding-bottom: getPadding(8);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 1000px;
+  }
+
+  &__title {
+    font-size: getFontSize("10xl");
+    font-weight: getFontWeight(4);
+    color: getColor("blanco", 0);
+
+    &--big {
+      font-size: getFontSize("11xl");
+    }
+  }
+
+  &__subtitle {
+    font-size: getFontSize("2xl");
+    font-weight: getFontWeight(5);
+    color: getColor("blanco", 0);
+    margin-bottom: getMargin(4);
+
+    &--small {
+      font-size: getFontSize("l");
+      margin-bottom: getMargin(12);
+    }
+  }
+}
