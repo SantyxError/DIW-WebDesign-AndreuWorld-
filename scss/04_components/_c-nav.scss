@@ -14,14 +14,45 @@
     padding-left: getPadding(15);
   }
 
+  @media (max-width: getMedia("desktop")) {
+    &__logo {
+      font-size: getFontSize("l");
+      padding-left: getPadding(7);
+    }
+  }
+
+  @media (max-width: getMedia("tablet")) {
+    &__logo {
+      font-size: getFontSize("3xl");
+    }
+  }
+
+  @media (max-width: getMedia("mobile")) {
+    &__logo {
+      font-size: getFontSize("4xl");
+    }
+  }
+
   &__menu-container {
     display: grid;
     justify-content: center;
     align-items: end;
     justify-items: start;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-gap: getGap(11) getGap(5);
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: 50px 50px;
+    grid-gap: getGap(8) getGap(7);
+  }
+
+  @media (max-width: getMedia("desktop")) {
+    &__menu-container {
+      grid-gap: getGap(5) getGap(1);
+    }
+  }
+
+  @media (max-width: getMedia("tablet")) {
+    &__menu-container {
+      display: none;
+    }
   }
 
   &__idioma {
@@ -37,8 +68,6 @@
     text-decoration: none;
     color: getColor("negro", 0);
     font-size: getFontSize("s");
-    width: 100px;
-    // padding-bottom: getPadding(7);
 
     &--big {
       font-size: getFontSize("m");
@@ -48,5 +77,17 @@
   &__buscador {
     width: 120px;
     height: 20px;
+  }
+
+  &__burger {
+    display: none;
+    font-weight: getFontWeight(7);
+    font-size: getFontSize("4xl");
+    padding-top: getPadding(10);
+  }
+  @media (max-width: getMedia("tablet")) {
+    &__burger {
+      display: block;
+    }
   }
 }

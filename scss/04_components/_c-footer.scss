@@ -12,12 +12,25 @@
     gap: getGap(10);
   }
 
+  @media (max-width: getMedia("desktop")) {
+    &__container {
+      flex-direction: column;
+    }
+  }
+
   &__logo {
     font-size: getFontSize("3xl");
     font-weight: getFontWeight(10);
     margin-top: getMargin(7);
     padding-left: getPadding(6);
-    width: 22%;
+    width: 400px;
+  }
+
+  @media (max-width: getMedia("desktop")) {
+    &__logo {
+      width: 300px;
+      font-size: getFontSize("xl");
+    }
   }
 
   &__info {
@@ -59,11 +72,29 @@
     }
   }
 
+  @media (max-width: getMedia("desktop")) {
+    &_link {
+      font-size: getFontSize("l");
+    }
+
+    &--title {
+      font-size: getFontSize("l");
+      font-weight: getFontWeight(8);
+    }
+  }
+
   &__menu {
     display: flex;
     justify-content: flex-start;
     align-items: start;
     gap: getGap(7);
+  }
+
+  @media (max-width: getMedia("desktop")) {
+    &__menu {
+      flex-wrap: wrap;
+      gap: getGap(11) getGap(6);
+    }
   }
 
   &__bloque {
@@ -73,6 +104,12 @@
     align-items: start;
     width: 100px;
     gap: getGap(6);
+  }
+
+  @media (max-width: getMedia("desktop")) {
+    &__bloque {
+      width: 130px;
+    }
   }
 
   &__politicas {

@@ -168,3 +168,13 @@
 @function getTextKeys() {
   @return map-keys($texto);
 }
+
+//MEDIAS
+
+@function getMedia($clave) {
+  @return map-get($media, $clave);
+}
+
+@function getMediaKeys() {
+  @return map-keys($media);
+}

@@ -13,6 +13,20 @@
     height: 1000px;
   }
 
+  @media (max-width: getMedia("desktop")) {
+    &__container {
+      text-align: center;
+      height: 1000px;
+    }
+  }
+
+  @media (max-width: getMedia("mobile")) {
+    &__container {
+      justify-content: center;
+      height: 500px;
+    }
+  }
+
   &__title {
     font-size: getFontSize("10xl");
     font-weight: getFontWeight(4);
@@ -20,6 +34,18 @@
 
     &--big {
       font-size: getFontSize("11xl");
+    }
+  }
+
+  @media (max-width: getMedia("desktop")) {
+    &__title {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: getMedia("mobile")) {
+    &__title {
+      font-size: getFontSize("5xl");
     }
   }
 
@@ -32,6 +58,17 @@
     &--small {
       font-size: getFontSize("l");
       margin-bottom: getMargin(12);
+    }
+  }
+
+  @media (max-width: getMedia("mobile")) {
+    &__subtitle {
+      font-size: getFontSize("xl");
+
+      &--small {
+        font-size: getFontSize("s");
+        margin-bottom: getMargin(12);
+      }
     }
   }
 }

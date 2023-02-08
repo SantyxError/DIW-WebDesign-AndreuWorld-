@@ -16,6 +16,15 @@
     margin-right: getMargin(6);
   }
 
+  @media (max-width: getMedia("mobile")) {
+    &__container {
+      text-align: center;
+      margin-right: 0;
+      align-items: center;
+      gap: getGap(4);
+    }
+  }
+
   &__text {
     text-align: left;
     color: getColor("negro", 0);
@@ -36,5 +45,31 @@
       font-size: getFontSize("m");
       text-decoration: none;
     }
+  }
+
+  @media (max-width: getMedia("mobile")) {
+    &__text {
+      text-align: center;
+      &--medium {
+        font-size: getFontSize("m");
+        font-weight: getFontWeight(7);
+      }
+
+      &--big {
+        font-size: getFontSize("4xl");
+        line-height: getLineHeight("5xl");
+      }
+
+      &--small {
+        font-size: getFontSize("s");
+      }
+    }
+  }
+}
+
+@media (max-width: getMedia("mobile")) {
+  .c-main {
+    height: 600px;
+    padding: getPadding(14) getPadding(0);
   }
 }
